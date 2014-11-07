@@ -15,7 +15,7 @@ def home():
     docs = collection.find()
     crimes = docs[0]['crimes']
     print crimes
-    return render_template("map.html")
+    return render_template("map.html", crimes=crimes)
 
 if __name__ == "__main__":
     app.run(debug=True)
