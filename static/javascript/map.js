@@ -14,7 +14,7 @@ var map;
        '<h3>' + crime.descr +'</h3>'+
        '<p>Date: ' + crime.date +
        '</p>'+
-       '<p> <a href="http://google.com">'+ 'More Info' +
+       '<p> <a href="' + crime.link + '">'+ 'More Info' +
        '</a></p>'
        
        var latLng = new google.maps.LatLng(crime.lat, crime.lng);
