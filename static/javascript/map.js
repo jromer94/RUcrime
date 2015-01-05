@@ -9,13 +9,31 @@ var map;
     for (var crime in crimes) {
        //change later to for loop
        crime = crimes[crime]
+
+       var contentString =
+       '<h3>' + crime.descr +'</h3>'+
+       '<p>Date: ' + crime.date +
+       '</p>'+
+       '<p> <a href="http://google.com">'+ 'More Info' +
+       '</a></p>'
+       
        var latLng = new google.maps.LatLng(crime.lat, crime.lng);
-       new google.maps.Marker({
+       var marker = new google.maps.Marker({
            position: latLng,
            map: map,
            title: crime.descr
        }); 
+       
+       marker.info = new google.maps.InfoWindow({
+           content: contentString
+       });      
+
+
        console.log("marker added");
+    
+       google.maps.event.addListener(marker, 'click', function() {
+           this.info.open(map, this);
+       });
     }
    }
 google.maps.event.addDomListener(window, 'load', initialize);
