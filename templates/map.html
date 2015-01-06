@@ -16,7 +16,7 @@
   </script>
   </head>
   <body>
-  <script src="../static/javascript/foundation.min.js"></script>
+  
   <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
@@ -30,18 +30,24 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <li class="has-dropdown">
-        <a href="#">Choose Campus</a>
+        <a href="#afdas">Choose Campus</a>
         <ul class="dropdown">
-          <li><a href="#">College Ave</a></li>
-          <li><a href="#">Cook/Douglass</a></li>
-          <li><a href="#">Busch</a></li>
-          <li><a href="#">Livingston</a></li>
+          <li class="active"><a href="#CA">College Ave</a></li>
+          <li class="active"><a href="#CD">Cook/Douglass</a></li>
+          <li class="active"><a href="#B">Busch</a></li>
+          <li class="active"><a href="#L">Livingston</a></li>
         </ul>
       </li>
     </ul>
   </section>
 </nav>
 <div id="map-canvas"></div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="../static/javascript/foundation.min.js"></script>
+<script src="../static/javascript/foundation.topbar.js"></script>
+<script>
+  $(document).foundation();
+</script>
   </body>
 </html>
 

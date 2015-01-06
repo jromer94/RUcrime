@@ -39,3 +39,10 @@ function initialize() {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
+document.addEventListener('DOMContentLoaded', function(){
+    var collegeAve = document.getElementById('campusdrop');
+    collegeAve.addEventListener('click', 'li', function(event){
+        console.log(this.text());
+    });
+
+});
