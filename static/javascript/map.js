@@ -41,12 +41,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 function jumpToCampus(campus) {
     if(campus === "B"){
+        map.panTo(new google.maps.LatLng(40.523328, -74.461356));
         console.log("jumped to busch");
     } else if(campus === "L"){
+        map.panTo(new google.maps.LatLng(40.522790, -74.436963));
         console.log("jumped to livi");
     } else if(campus === "CD"){
+        map.panTo(new google.maps.LatLng(40.482271, -74.434090));
         console.log("jumped to cook");
     } else {
+        map.panTo(new google.maps.LatLng(40.500, -74.452));
         console.log("jumped to the ave");
     }
 }
