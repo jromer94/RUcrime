@@ -53,4 +53,5 @@ function jumpToCampus(campus) {
         map.panTo(new google.maps.LatLng(40.500, -74.452));
         console.log("jumped to the ave");
     }
+    map.setZoom(16)
 }
