@@ -39,10 +39,14 @@ function initialize() {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
-document.addEventListener('DOMContentLoaded', function(){
-    var collegeAve = document.getElementById('campusdrop');
-    collegeAve.addEventListener('click', 'li', function(event){
-        console.log(this.text());
-    });
-
-});
+function jumpToCampus(campus) {
+    if(campus === "B"){
+        console.log("jumped to busch");
+    } else if(campus === "L"){
+        console.log("jumped to livi");
+    } else if(campus === "CD"){
+        console.log("jumped to cook");
+    } else {
+        console.log("jumped to the ave");
+    }
+}
