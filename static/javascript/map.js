@@ -11,12 +11,12 @@ function initialize() {
        //change later to for loop
         crime = crimes[crime]
 
-        var contentString =
-        '<h3>' + crime.descr +'</h3>'+
-        '<p>Date: ' + crime.date +
-        '</p>'+
-        '<p> <a href="' + crime.link + '">'+ 'More Info' +
-        '</a></p>'
+        var contentString = '<div style="line-height: 1.35; overflow: hidden; white-space: nowrap"><div><b>' +
+        crime.descr +'</b></div>'+
+        '<div>Date: ' + crime.date +
+        '</div>'+
+        '<div> <a href="' + crime.link + '">'+ 'More Info' +
+        '</a></div></div>'
        
         var latLng = new google.maps.LatLng(crime.lat, crime.lng);
         var marker = new google.maps.Marker({
