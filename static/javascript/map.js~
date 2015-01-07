@@ -11,7 +11,7 @@ function initialize() {
        //change later to for loop
         crime = crimes[crime]
 
-        var contentString = '<div style="line-height: 1.35; overflow: hidden; white-space: nowrap; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box"><div><b>' +
+        var contentString = '<div style="line-height: 1.35; overflow: hidden; white-space: nowrap"><div><b>' +
         crime.descr +'</b></div>'+
         '<div>Date: ' + crime.date +
         '</div>'+
