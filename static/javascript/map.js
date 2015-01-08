@@ -23,7 +23,7 @@ function initialize() {
                 icon = 'http://i.imgur.com/4iEFVfp.png';
                 break;
             default:
-                icon = 'http://i.imgur.com/Ijvdarp.png';
+                icon = 'http://i.imgur.com/BlwksAh.png';
         }
         
         var contentString = '<div style="line-height: 1.35; overflow: hidden; white-space: nowrap; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box"><div><b>' +
