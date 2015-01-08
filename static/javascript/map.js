@@ -11,7 +11,21 @@ function initialize() {
     for (var crime in crimes) {
        //change later to for loop
         crime = crimes[crime]
-
+        var icon = '';
+        switch(crime.descr){
+            case 'Robbery':
+                icon = 'http://i.imgur.com/Wg9NYHC.png';
+                break;
+            case 'Burglary':
+                icon = 'http://i.imgur.com/om4I7lF.png';
+                break;
+            case 'Arson':
+                icon = 'http://i.imgur.com/4iEFVfp.png';
+                break;
+            default:
+                icon = 'http://i.imgur.com/Ijvdarp.png';
+        }
+        
         var contentString = '<div style="line-height: 1.35; overflow: hidden; white-space: nowrap; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box"><div><b>' +
         crime.descr +'</b></div>'+
         '<div>Date: ' + crime.date +
@@ -23,7 +37,8 @@ function initialize() {
         var marker = new google.maps.Marker({
             position: latLng,
             map: map,
-            title: crime.descr
+            title: crime.descr,
+            icon:  new google.maps.MarkerImage(icon)
         }); 
        
         marker.info = new google.maps.InfoWindow({
